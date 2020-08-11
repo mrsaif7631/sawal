@@ -4,21 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Form</title>
-<script type="text/javascript">
-	function validateForm() {
-	var uid = document.myform.uid.value;
-	var pwd = document.myform.pwd.value;
-	
- if(uid == "Saif7631" && pwd =="Ilovemyma123@"){
-		return false;
-	}
-	}
-	
-</script>
 </head>
 <body>
 <!--Form element -->
-<form  name="myform" action="/sawal/site/form1.html" onsubmit="return validateForm()" method="post">
+<form  action="/sawal/site/form1.html" method="post">
 <label for="uid">UID:</label>
 <input type="text"  name="uid" id="uid"><br><br>
 <label for="pwd">PWD:</label>
