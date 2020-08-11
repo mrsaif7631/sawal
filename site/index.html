@@ -1,13 +1,28 @@
 
 <DOCTYPE html>
 <html>
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+<script type="text/javascript">
+	function validateForm() {
+	var uid = document.myform.uid.value;
+	var pwd = document.myform.pwd.value;
+	
+ if(uid == "Saif7631" && pwd =="Ilovemyma123@"){
+		return false;
+	}
+	}
+	
+</script>
+</head>
 <body>
 <!--Form element -->
-<form action="/sawal/site/form1.html">
+<form  name="myform" action="/sawal/site/form1.html" onsubmit="return validateForm()" method="post">
 <label for="uid">UID:</label>
-<input type="text" id="uid" name="uid" value="" required ><br><br>
+<input type="text"  name="uid" id="uid"><br><br>
 <label for="pwd">PWD:</label>
-<input type="password" id="pwd" name="pwd" value="" required ><br><br>
+<input type="password" name="pwd" id="pwd"><br><br>
 <input type="submit" value="Submit">
 </form>
 </body>
