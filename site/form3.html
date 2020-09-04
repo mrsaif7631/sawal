@@ -4,34 +4,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Form</title>
-<script type="text/javascript">
-	function validateForm() {
-	var x = document.forms["myForm"]["uid"].value;
-	var y = document.forms["myForm"]["pwd"].value;
-	
-	if (x == "" && y == ""){
-		alert("Name must be filled out ");
-		return false;
-	else if(x ==null && y ==null){
-		alert("enter valid input");
-		return false;
-	else if(x == "Saif7631" && y =="Ilovemyma123@"){
-		return true;
-	}
-	}
-	}
-	}
-</script>
 </head>
 <body>
 <!--Form element -->
-<form  name="myForm" action="/sawal/site/form1.html" onsubmit="return validateForm()" method="post">
+<form  name="myForm" action="/sawal/site/form1.html" method="post">
 <label for="uid">UID:</label>
-<input type="text" id="uid" name="uid" required ><br><br>
+<input type="text" id="uid" name="uid"  value ="<?= htmlentities($_GET) ?> " required ><br><br>
 <label for="pwd">PWD:</label>
-<input type="password" id="pwd" name="pwd" required ><br><br>
+<input type="password" id="pwd" name="pwd"  value= "<?= htmlentities($_GET) ?> " required ><br><br>
 <input type="submit" value="Submit">
 </form>
+<pre>
+	$_POST:
+	<?php
+	print_r($_POST);
+	?>
+	$_GET:
+	<?php
+	print_r($_GET);
+	?>
 </body>
 </html>
-
