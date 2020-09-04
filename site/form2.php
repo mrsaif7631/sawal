@@ -1,0 +1,28 @@
+
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+</head>
+<body>
+<!--Form element -->
+<form method="post">
+<label for="uid">UID:</label>
+<input type="text" id="uid" name="uid"  required ><br><br>
+<label for="pwd">PWD:</label>
+<input type="password" id="pwd" name="pwd" required ><br><br>
+<input type="submit" value="Submit">
+</form>
+<pre>
+	$_POST:
+	<?php
+	print_r($_POST);
+	?>
+	$_GET:
+	<?php
+	print_r($_GET);
+	?>
+</pre>
+</body>
+</html>
